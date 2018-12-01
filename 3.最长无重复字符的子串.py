@@ -14,6 +14,7 @@
 #      请注意，答案必须是一个子串，"pwke" 是一个子序列 而不是子串。
 
 class Solution:
+    # 法一
     def lengthOfLongestSubstring(self, s):
         # 开始坐标和最大长度都是0
         start = maxlen = 0
@@ -31,6 +32,8 @@ class Solution:
             # 把dt[s[i]]重置为i
             dt[s[i]] = i
         return maxlen
+    
+    # 简化优化法一
     # def lengthOfLongestSubstring(self, s):
     #     maxlen = 0
     #     start = 0
@@ -41,4 +44,20 @@ class Solution:
     #         maxlen = max(maxlen,i-start+1)   
     #         dt[c] = i
     #     return maxlen
+
+    # 获取字符串
+    # def findstr(str):
+    #     start = maxlength = 0
+    #     a = {}
+    #     begin = end = 0
+    #     for i in range(len(str)):
+    #         if str[i] in a and start <= a[str[i]]:
+    #             start = a[str[i]] + 1
+    #         else:
+    #             if maxlength <= i-start+1:
+    #                 begin = start
+    #                 end = i
+    #             maxlength = max(maxlength, i-start+1)
+    #         a[str[i]] = i
+    #     return str[begin:end+1]
 print(Solution().lengthOfLongestSubstring('12345678980'))
