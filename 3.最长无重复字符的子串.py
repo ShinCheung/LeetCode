@@ -47,18 +47,18 @@ class Solution:
 
     # 获取字符串
     def findstr(self, s):
-        start = maxlength = 0
-        a = {}
+        start = maxlen = 0
+        d = {}
         begin = end = 0
         for i in range(len(s)):
-            if s[i] in a and start <= a[s[i]]:
-                start = a[s[i]] + 1
+            if s[i] in d and start <= d[s[i]]:
+                start = d[s[i]] + 1
             else:
-                if maxlength <= i-start+1:
+                if maxlen <= i-start+1:
                     begin = start
                     end = i
-                maxlength = max(maxlength, i-start+1)
-            a[s[i]] = i
+                maxlen = max(maxlen, i-start+1)
+            d[s[i]] = i
         return s[begin:end+1]
 print(Solution().lengthOfLongestSubstring('12345678980'))
 print(Solution().findstr('12345678980'))
