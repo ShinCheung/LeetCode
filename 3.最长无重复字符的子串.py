@@ -46,19 +46,19 @@ class Solution:
     #     return maxlen
 
     # 获取字符串
-    def findstr(self, str):
+    def findstr(self, s):
         start = maxlength = 0
         a = {}
         begin = end = 0
-        for i in range(len(str)):
-            if str[i] in a and start <= a[str[i]]:
-                start = a[str[i]] + 1
+        for i in range(len(s)):
+            if s[i] in a and start <= a[s[i]]:
+                start = a[s[i]] + 1
             else:
                 if maxlength <= i-start+1:
                     begin = start
                     end = i
                 maxlength = max(maxlength, i-start+1)
-            a[str[i]] = i
-        return str[begin:end+1]
+            a[s[i]] = i
+        return s[begin:end+1]
 print(Solution().lengthOfLongestSubstring('12345678980'))
 print(Solution().findstr('12345678980'))
