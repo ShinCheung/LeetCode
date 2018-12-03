@@ -19,8 +19,7 @@ class Solution:
         nums.sort()
         for i in range(len(nums)-2):
             if i == 0 or nums[i] > nums[i-1]:
-                l = i+1
-                r = len(nums)-1
+                l, r = i + 1, len(nums) - 1
                 while l < r:
                     res = nums[i] + nums[l] + nums[r]
                     if res == 0:
