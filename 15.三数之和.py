@@ -38,11 +38,10 @@ class Solution:
 
     # leetcode超时
     def threeSum_V2(self, nums):
-        n = len(nums)
         nums = sorted(nums)
         ans = []
-        for i in range(n-2):
-            l, r = i + 1, n - 1
+        for i in range(len(nums)-2):
+            l, r = i + 1, len(nums) - 1
             while l < r:
                 res = nums[i] + nums[l] + nums[r]
                 if res == 0:
