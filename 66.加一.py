@@ -18,4 +18,4 @@ class Solution:
         num_int += 1
         return [int(i) for i in str(num_int)]
 
-print(Solution().plusOne([1,2,3,9]))
+print(Solution().plusOne([4,3,2,9]))
