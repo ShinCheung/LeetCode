@@ -23,16 +23,16 @@ class Solution:
         p = head
         carry = 0
         while True:
-            if l1 != None:
+            if l1:
                 carry += l1.val
                 l1 = l1.next
-            if l2 != None:
+            if l2:
                 carry += l2.val
                 l2 = l2.next
             p.val = carry % 10
             carry //= 10
             # 运算未结束新建一个节点用于储存答案，否则退出循环
-            if l1 != None or l2 != None or carry != 0:
+            if l1 or l2 or carry != 0:
                 p.next = ListNode(0)
                 p = p.next
             else: 
