@@ -24,8 +24,6 @@ class Solution:
     # 如果左括号有剩余即 left>0 则可以添加左括号
     # 如果右括号剩余数大于左括号剩余数 即right>left 则可以添加右括号
     def helpler(self, l, r, item, res):
-        if r < l:
-            return
         if l == 0 and r == 0:
             res.append(item)
         if l > 0:
