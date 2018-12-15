@@ -36,4 +36,5 @@ class Solution:
         if root.left and root.right:
             return min(lh, rh) + 1
         else:
+            # 只有左子树或只有右子树的情况
             return max(lh, rh) + 1
