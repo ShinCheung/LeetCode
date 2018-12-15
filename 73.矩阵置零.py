@@ -36,11 +36,13 @@ class Solution:
         rnum, cnum = len(matrix), len(matrix[0])
         r = [False for i in range(rnum)]
         c = [False for i in range(cnum)]
+        # 遍历，把为0的地方置为True
         for i in range(rnum):
             for j in range(cnum):
                 if matrix[i][j] == 0:
                     r[i] = True
                     c[j] = True
+        # 再次遍历，把有0的行列置为0
         for i in range(rnum):
             for j in range(cnum):
                 if r[i] or c[j]:
