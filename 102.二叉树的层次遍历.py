@@ -33,6 +33,7 @@ class Solution:
         while queue:
             level = []
             for _ in range(len(queue)):
+                # 使用栈的性质，此处必须pop(0)
                 node = queue.pop(0)
                 level.append(node.val)
                 if node.left:
