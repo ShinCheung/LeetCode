@@ -27,10 +27,6 @@
 # ]
 class Solution:
     def setZeroes(self, matrix):
-        """
-        :type matrix: List[List[int]]
-        :rtype: void Do not return anything, modify matrix in-place instead.
-        """
         if not matrix:
             return
         rnum, cnum = len(matrix), len(matrix[0])
@@ -47,3 +43,6 @@ class Solution:
             for j in range(cnum):
                 if r[i] or c[j]:
                     matrix[i][j] = 0
+        return matrix
+
+print(Solution().setZeroes([[1,1,1],[1,0,1],[1,1,1]]))
