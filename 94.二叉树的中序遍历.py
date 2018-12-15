@@ -25,8 +25,10 @@ class Solution:
         res = []
         if root.left:
             res += self.inorderTraversal(root.left)
+            # res.extend(self.inorderTraversal(root.left))
         if root.val:
             res.append(root.val)
         if root.right:
             res += self.inorderTraversal(root.right)
+            # res.extend(self.inorderTraversal(root.right))
         return res
