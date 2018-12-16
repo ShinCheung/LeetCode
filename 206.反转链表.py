@@ -21,7 +21,7 @@ class Solution:
         last = None
         while head:
             tmp = head.next     # tmp保存下一次要插入的节点
-            head.next = last    # 把pHead插入到last中
+            head.next = last    # 把head插入到last中
             last = head         # 纠正头结点last的指向
             head = tmp          # head指向下一次要插入的节点
         return last
