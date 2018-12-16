@@ -23,8 +23,7 @@ class Solution(object):
         :rtype: ListNode
         """
         if not headA or not headB:
-            return None
-            
+            return         
         a, b = headA, headB
         while a != b:
             a = a.next if a else headB
